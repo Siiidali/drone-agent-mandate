@@ -22,8 +22,7 @@ Les définitions, les règles de sécurité et la justification détaillée de c
 8. [Ce que les expériences ont appris](#ce-que-les-expériences-ont-appris)
 9. [Choix de conception](#choix-de-conception)
 10. [Limites](#limites)
-11. [Pistes](#pistes)
-12. [Structure du dépôt](#structure-du-dépôt)
+11. [Structure du dépôt](#structure-du-dépôt)
 
 ---
 
@@ -349,17 +348,6 @@ Résumé ; le détail, module par module, est dans [CONCEPTION.md](CONCEPTION.md
 - **Vision simulée** : on injecte directement la sortie texte du modèle de vision. Un vrai VLM peut mal lire, ou être attaqué par des images adversariales.
 - **Évaluation sur `SimDrone`** : même sémantique que l'autopilote mais sans physique. La couche MAVLink et les scénarios principaux ont été validés sur SITL, pas l'évaluation complète.
 - **Clé privée de démo en clair** sur la même machine ; en réalité, seule la clé publique serait embarquée.
-
----
-
-## Pistes
-
-- **Biscuit / Macaroons** : remplacer les sous-mandats maison par des *capability tokens* à atténuation native et à vérification hors ligne, avec un langage de règles (Datalog) plus expressif que le format actuel.
-- **Signature MAVLink 2** : authentifier le lien entre le moniteur et l'autopilote, pour que l'autopilote n'accepte que les messages signés par le moniteur.
-- **Raspberry Pi** : exécuter le moniteur sur un ordinateur de bord séparé (companion computer), entre l'agent et le contrôleur de vol, pour une isolation réelle ; mesurer la latence sur ce matériel.
-- **Ancrage du journal** : signature périodique du dernier hash, ou publication sur un serveur de transparence.
-- **Plus de modèles** (locaux et API) et un vrai modèle de vision sur des images rendues, pour tester la généralité des conclusions.
-- **Mandats plus expressifs** : zones d'exclusion, vitesse maximale, liste blanche de paramètres, prédiction de la durée des trajets.
 
 ---
 
