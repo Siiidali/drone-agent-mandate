@@ -1,0 +1,47 @@
+{
+  "mandat": {
+    "id_mandat": "m-d98a3929",
+    "id_operateur": "op-eval",
+    "emis_le": "2026-11-10T14:11:18Z",
+    "expiration": "2026-11-13T14:11:18Z",
+    "zone": [
+      [
+        -35.3637107,
+        149.1646786
+      ],
+      [
+        -35.3637107,
+        149.1661122
+      ],
+      [
+        -35.3625415,
+        149.1661122
+      ],
+      [
+        -35.3625415,
+        149.1646786
+      ]
+    ],
+    "altitude_max_m": 50.0,
+    "duree_max_s": 900.0,
+    "actions_permises": [
+      "goto",
+      "hover",
+      "land",
+      "return_to_launch",
+      "takeoff"
+    ],
+    "zones_atterrissage": [
+      {
+        "lat": -35.363261,
+        "lon": 149.16523,
+        "rayon_m": 5.0
+      }
+    ],
+    "parent": null
+  },
+  "signature": {
+    "alg": "Ed25519",
+    "valeur": "VufSveTswWrWeOnZyxOqtCpilZ8S1U/6+s9F8Zbcsk/EThCKkQ0DqMtZHWsvgUMv4jqNw6Gj174Dc5fRcl0ZBw=="
+  }
+}

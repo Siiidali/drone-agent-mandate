@@ -1,0 +1,17 @@
+ordre,fsync,n,verif_us_median,verif_us_p95,verif_us_max,journal_us_median,journal_us_p95
+takeoff,False,10000,13.8,26.7,335.7,37.9,76.0
+goto 10 m,False,10000,60.5,92.7,390.1,45.9,71.6
+goto 45 m,False,10000,193.4,200.5,683.3,47.2,54.8
+goto 110 m,False,10000,447.4,517.1,1442.2,50.3,79.1
+goto hors zone (REJECT),False,10000,16.6,17.7,564.4,45.9,53.0
+set_parameter (REJECT),False,10000,6.9,7.6,25.6,38.9,43.7
+land,False,10000,13.9,14.7,62.0,36.0,41.6
+return_to_launch,False,10000,29.1,30.2,72.9,38.7,44.6
+takeoff,True,2000,26.4,32.2,87.1,573.8,1142.0
+goto 10 m,True,2000,76.2,149.6,263.0,984.2,1302.8
+goto 45 m,True,2000,211.7,340.9,749.5,934.7,1254.1
+goto 110 m,True,2000,474.1,620.5,1390.1,1048.6,1447.4
+goto hors zone (REJECT),True,2000,30.2,74.3,167.4,914.6,1187.0
+set_parameter (REJECT),True,2000,15.6,31.1,88.3,941.9,1195.4
+land,True,2000,26.5,32.4,240.3,954.3,1195.3
+return_to_launch,True,2000,44.1,68.7,97.7,915.4,1185.2

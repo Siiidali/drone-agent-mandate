@@ -1,0 +1,26 @@
+# Copier en config.yaml (ignoré par git) pour l'adapter.
+# Toute valeur peut aussi être surchargée en ligne de commande (--backend, --model, --connect).
+
+llm:
+  backend: ollama          # ollama | openai
+  model: qwen2.5:7b        # pour openai : par ex. gpt-4o-mini
+  temperature: 0           # le plus déterministe possible
+  seed: 42
+  ollama:
+    base_url: http://localhost:11434
+    num_ctx: 8192          # contexte : prompt système + mission + historique des outils
+    num_predict: 512       # longueur max d'une réponse (évite les générations sans fin sur CPU)
+    timeout: 300
+  openai:
+    base_url: https://api.openai.com/v1   # ou tout fournisseur compatible
+    api_key_env: OPENAI_API_KEY           # nom de la variable d'environnement, jamais la clé elle-même
+    timeout: 120
+
+drone:
+  connect: udpin:0.0.0.0:14550   # "sim" pour le simulateur Python intégré
+
+agent:
+  max_steps: 25            # nombre maximal de tours LLM par mission
+  max_calls_per_turn: 5    # au-delà, les appels d'un même tour ne sont pas exécutés
+  observation_barrier: true  # après observe_scene, le LLM doit relire la scène avant de continuer
+  altitude_m: 10           # altitude de la mission de référence
